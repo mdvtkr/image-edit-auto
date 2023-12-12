@@ -1,0 +1,11 @@
+[
+    {
+        "path": "full path of directory",
+        "name": "substring of file name",
+        "extensions": ["jpg", "png"],
+        "backup": true,
+        "resize": null,
+        "region": [[0,0], [10,0], [10,10], [0,10]],
+        "grayscale": true
+    }
+]

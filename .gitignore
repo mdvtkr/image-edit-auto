@@ -1,0 +1,11 @@
+.venv
+
+.vscode/*
+!.vscode/launch.json
+
+config/*
+!config/jobs.sample.json
+
+*.spec
+
+__pycache__
