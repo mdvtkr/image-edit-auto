@@ -15,6 +15,8 @@ this file can contain multiple jobs and they are processed in the order specifie
 - `resize`: (optional) resize ratio. a floating point real number.
 - `regions`: (optional) masking regions. multiple regions can be specified.
 - `grayscale`: (optional) change image color to grayscale. `true` or `false`
+- `rotate`: (optional) rotate image clockwise `90`, `180` or `270` degree.
+- `flip`: (optional) flip image. `horizontal`(x axis), `vertical`(y axis) or `all`(x and y axises)
 
 ```json
 // example of jobs.json
@@ -26,7 +28,9 @@ this file can contain multiple jobs and they are processed in the order specifie
         "backup": true,
         "resize": null,
         "regions": [[[0,0], [10,0], [10,10], [0,10]]],
-        "grayscale": true       
+        "grayscale": true,
+        "rotate": 90,
+        "flip": "vertical"
     }
 ]
 ```

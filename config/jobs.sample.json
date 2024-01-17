@@ -6,6 +6,8 @@
         "backup": true,
         "resize": null,
         "region": [[0,0], [10,0], [10,10], [0,10]],
-        "grayscale": true
+        "grayscale": true,
+        "rotate": 90,
+        "flip": "horizontal"
     }
 ]

@@ -6,7 +6,7 @@ import numpy as np
 import unicodedata
 
 MANDATORY = ["path", "extensions"]
-OPTIONAL = ["name",  "backup", "resize", "regions", "grayscale"]
+OPTIONAL = ["name",  "backup", "resize", "regions", "grayscale", "rotate", "flip"]
 
 with open('config/jobs.json', 'rt') as f:
     jobs = json.load(f)
@@ -67,6 +67,36 @@ for job in jobs:
         if job['grayscale']:
             print('  grayscale')
             im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+
+        if job['rotate']:
+            print(f'  rotate {job["rotate"]} clockwise')
+            code = None
+            if job['rotate'] == 90:
+                code = cv2.ROTATE_90_CLOCKWISE
+            elif job['rotate'] == 180:
+                code = cv2.ROTATE_180
+            elif job['rotate'] == 270:
+                code = cv2.ROTATE_90_COUNTERCLOCKWISE
+            else:
+                print('    not supported degree')
+
+            if code != None:
+                im = cv2.rotate(im, code)
+
+        if job['flip']:
+            print(f'  flip {job["flip"]}')
+            code = None
+            if job['flip'] == 'vertical':
+                code = 1
+            elif job['flip'] == 'horizontal':
+                code = 0
+            elif job['flip'] == 'all':
+                code = -1
+            else:
+                print('    not supported flip option')
+                
+            if code != None:
+                im = cv2.flip(im, code)
 
         cv2.imwrite(str(file.absolute()), im)
 
