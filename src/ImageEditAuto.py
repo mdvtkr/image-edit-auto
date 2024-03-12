@@ -6,7 +6,7 @@ import numpy as np
 import unicodedata
 
 MANDATORY = ["path", "extensions"]
-OPTIONAL = ["name",  "backup", "resize", "regions", "grayscale", "rotate", "flip"]
+OPTIONAL = ["name",  "backup", "resize", "regions", "grayscale", "rotate", "flip", "crop"]
 
 with open('config/jobs.json', 'rt') as f:
     jobs = json.load(f)
@@ -67,6 +67,10 @@ for job in jobs:
         if job['grayscale']:
             print('  grayscale')
             im = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+        
+        if job['crop']:
+            print('   crop')
+            im = im[job['crop'][1]:job['crop'][3], job['crop'][0]:job['crop'][2]]
 
         if job['rotate']:
             print(f'  rotate {job["rotate"]} clockwise')

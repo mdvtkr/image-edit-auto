@@ -17,6 +17,7 @@ this file can contain multiple jobs and they are processed in the order specifie
 - `grayscale`: (optional) change image color to grayscale. `true` or `false`
 - `rotate`: (optional) rotate image clockwise `90`, `180` or `270` degree.
 - `flip`: (optional) flip image. `horizontal`(x axis), `vertical`(y axis) or `all`(x and y axises)
+- `crop`: (optional) crop image.  `left`, `top`, `right`, `bottom`
 
 ```json
 // example of jobs.json
@@ -28,6 +29,7 @@ this file can contain multiple jobs and they are processed in the order specifie
         "backup": true,
         "resize": null,
         "regions": [[[0,0], [10,0], [10,10], [0,10]]],
+        "crop": [0, 10, 1024, 510],
         "grayscale": true,
         "rotate": 90,
         "flip": "vertical"

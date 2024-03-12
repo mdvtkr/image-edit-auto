@@ -6,6 +6,7 @@
         "backup": true,
         "resize": null,
         "region": [[0,0], [10,0], [10,10], [0,10]],
+        "crop": [0, 10, 1024, 510],
         "grayscale": true,
         "rotate": 90,
         "flip": "horizontal"
