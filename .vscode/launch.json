@@ -5,10 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "main",
-            "type": "python",
+            "name": "image",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/src/ImageEditAuto.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "video",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/VideoEditAuto.py",
             "console": "integratedTerminal",
             "justMyCode": true
         }

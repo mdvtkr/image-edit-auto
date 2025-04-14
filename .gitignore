@@ -4,7 +4,7 @@
 !.vscode/launch.json
 
 config/*
-!config/jobs.sample.json
+!config/*.jobs.sample.json
 
 *.spec
 

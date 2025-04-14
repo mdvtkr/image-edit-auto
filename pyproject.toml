@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "image-edit-auto"
-version = "0.2.0"
+name = "media-edit-auto"
+version = "0.3.0"
 description = ""
 authors = ["mdvtkr <mdvtkr@gmail.com>"]
 readme = "README.md"
