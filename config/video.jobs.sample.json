@@ -3,8 +3,9 @@
         "source_path": "place where input file exists",
         "output_path": "(optional) place where to save split file(s)",
         "file": "input file name",
-        "crop": "crop filter like 1500:845:0:0",
-        "split": [
+        "crop": "(optional) crop filter like 1500:845:0:0",
+        "m3u8": (optional) true or false : create m3u8 format for each split video,
+        "split": (optional) [
             {
                 "title": "title of split video. .mp4 extension will be appended.",
                 "time": ["start time like 00:00:05", "end time like 00:18:00"]
